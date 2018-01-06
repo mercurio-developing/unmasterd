@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
       .subscribe(
       fileData => {FileSaver.saveAs(fileData, "sample.pdf")},
       error => {
+        event.preventDefault();
         console.log(error)
       });
   }
