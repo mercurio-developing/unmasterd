@@ -16,7 +16,12 @@ export class NavbarComponent implements OnInit {
   }
   
   pdf() {
-    this.navService.getFile('https://clarividencia-fotografia.herokuapp.com:443/downloads')
-      .subscribe(fileData => FileSaver.saveAs(fileData, "sample.pdf"));
+    this.navService.getFile('https://clarividencia-fotografia.herokuapp.com/downloads')
+      .subscribe(
+      fileData => {FileSaver.saveAs(fileData, "sample.pdf")},
+      error => {
+        console.log(error)
+      });
   }
 }
+)

@@ -16,6 +16,7 @@ import { DbComponent } from './components/db/db.component';
 import { BackDirective } from './shared/directives/back.directive';
 import { HeaderBlackComponent } from './components/header-black/header-black.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { EmailsuccessComponent } from './components/emailsuccess/emailsuccess.component';
 
 
 const appRoutes: Routes = [
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     DbComponent,
     BackDirective,
     HeaderBlackComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EmailsuccessComponent
   ],
   imports: [
     BrowserModule,
