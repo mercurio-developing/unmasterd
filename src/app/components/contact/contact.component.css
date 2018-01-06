@@ -1,0 +1,125 @@
+.container{
+    height: 100%;
+}
+
+.logo{
+    width: 140px;
+    height: 40px;
+        position: absolute;
+
+}
+.logo-mobile{
+    width: 140px;
+    height: 40px;
+}
+
+input{
+    border:none;
+    font-family:Courier New;
+    font-size:14px;
+    color:black;
+}
+button{
+        background-color:#000;
+        color:#fff;
+
+}
+textarea{
+    border:none;
+    font-family:Courier New;
+    font-size:14px;
+    color:black;
+}
+
+form{
+    width: 350px;
+}
+
+hr{
+    color:black;
+}
+
+.logo{
+    position:absolute;
+    bottom:25%;
+    left:32%;
+    width: 140px;
+    height: 40px;
+}
+
+.form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 576px) { 
+    .contact-row{
+        height: 25%;
+    }
+    form{
+            width: 400px;
+        }
+
+        .logo{
+            position:absolute;
+            top:70%;
+            left:20%;
+            width: 140px;
+            height: 40px;
+        }
+}
+
+@media (min-width: 768px) { 
+  .contact-row{
+        height: 25%;
+  } 
+  form{
+        width: 500px;
+        }
+  .logo{
+        position:absolute;
+        top:70%;
+        left:20%;
+        width: 140px;
+        height: 40px;
+        }
+}
+
+@media (min-width: 992px) {  
+    .contact-row{
+        height: 55%;
+    }
+    
+      form{
+            width: 500px;
+        }
+     
+      .logo{
+            position:absolute;
+            top:70%;
+            left:20%;
+            width: 140px;
+            height: 40px;
+        }
+}
+
+@media (min-width: 1200px) { 
+    .contact-row{
+        height: 55%;
+    }
+     form{
+            width: 500px;
+        }
+    .logo{
+            position:absolute;
+            top:70%;
+            left:20%;
+            width: 140px;
+            height: 40px;
+        }    
+}

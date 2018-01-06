@@ -1,0 +1,59 @@
+<div class="container-fluid" *ngIf="show === true" [BackDirective]="'black'">
+    <div class="row row-1">
+        <div class="col-6" [ngClass]="{'hoverImg1': showImg1}"></div>
+        <div class="col-6" [ngClass]="{'hoverImg2': showImg2}"></div>
+    </div>
+    <div class="row position-absolute row-2">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sides">
+               <div  class="container mt-5 text-right">
+                <h1 class="h-eir">EIR</h1>
+                <a [routerLink]="['/eir']">
+                <img class="imgThumb rounded float-right mt-4"  (mouseenter) ="showImg1 = true" (mouseleave) ="showImg1 = false" src="../assets/img/eir-1.jpg" alt="">
+                </a> 
+            </div>
+        </div>
+        <div class="col-4">
+            <app-header></app-header>
+            <br class="mt-5">
+            <app-navbar></app-navbar>
+        </div>
+         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sides">
+            <div class="container mt-5 text-left">
+                <h1 class="h-db">DB</h1>
+                <a [routerLink]="['/db']">
+                <img class="imgThumb rounded float-left mt-4"  (mouseenter) ="showImg2 = true" (mouseleave) ="showImg2 = false" src="../assets/img/db-1.jpg" alt="">
+                </a>
+            </div>
+         </div>
+    </div>
+</div>
+<div class="container p-0" *ngIf="show === false" [BackDirective]="'black'">
+    <div class="row mb-5">
+        <div class="col-12  col-sm-6 col-md-6 col-lg-6 col-xl-6 my-auto mx-auto ">
+            <app-header></app-header>
+            <br class="mt-5">
+            <app-navbar></app-navbar>
+            <br class="mt-5">
+            <div class="row mt-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
+                     <h1><p class="text-center">DB</p></h1>
+                     <a [routerLink]="['/db']">
+                        <img class="imgThumb-2 rounded" src="../assets/img/db-1.jpg"
+                                alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
+                    <h1>
+                    <p class="text-center">EIR</p>
+                    </h1>
+                    <a [routerLink]="['/eir']">
+                        <img class="imgThumb-2 rounded" src="../assets/img/eir-1.jpg"
+                                alt="">
+                    </a>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>

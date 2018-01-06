@@ -1,0 +1,26 @@
+a{
+    font-family: Consolas;
+    color:white;
+    font-size: 12px;
+    opacity: 0.8
+}
+a:hover{
+    text-decoration: line-through;
+}
+
+
+/* @media (max-width: 575.99px) { a {
+        font-size:10px;
+    } }
+
+@media (min-width: 767.99px) { a {
+        font-size:12px;
+    }}
+
+@media (min-width: 991.99px) { a{
+        font-size:14px;
+    } }
+
+@media (min-width: 1199.99px) {a{
+        font-size:14px;
+    } } */

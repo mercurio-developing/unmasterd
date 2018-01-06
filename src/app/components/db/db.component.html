@@ -1,0 +1,72 @@
+  <div class="container ml-xl-5 ml-lg-5 mt-5" [BackDirective]="'white'" >
+    <div class="main-row row mt-xl-5 ml-xl-5 pl-xl-5 mt-md-5 ml-md-5 pl-md-0">
+    <div class="col-lg-12 ml-md-5 pl-md-5 pr-md-0 col-xl-12 p-lg-5 m-lg-5 p-xl-5 m-xl-5">
+      <div class="row mt-5">
+        <img [routerLink]="['/home']" class="logo-mobile mx-auto mb-5 d-inline d-sm-inline d-md-inline d-lg-none d-xl-none" src="../assets/img/logo-black.svg" alt="">
+        </div>
+      <div class="row">
+        <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+          <h5 class="pt-4 m-0 pb-0">PROSPECT.</h5>
+          <p class="pb-2">Find the best leads.</p>
+        </div>
+        <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+          <h5 class="pt-4 m-0 pb-0">ACCOUNTS.</h5>
+          <p class="pb-2">New classic alignment.</p>
+        </div>
+        <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+          <h5 class="pt-4 m-0 pb-0">LA/B.</h5>
+          <p class="pb-2">Undoubtedly Unique.</p>
+        </div>
+      </div>
+      <div *ngIf="showRow === true" class="row">
+              <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+                <h5 class="pt-4 m-0 pb-0">STANDARD.</h5>
+                <p class="pb-2">Traditional contact info.</p>
+              </div>
+              <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+                <h5 class="pt-4 m-0 pb-0">STANDARD.</h5>
+                <p class="pb-2">Traditional company info.</p>
+              </div>
+              <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+                <h5 class="pt-4 m-0 pb-0">ADDRESS.</h5>
+                <p class="pb-2">Market-centric values.</p>
+              </div>
+              <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+              <h5 class="pt-4 m-0 pb-0">MIND MAP.</h5>
+              <p class="pb-2">Discover influence level.</p>
+             </div>
+             <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+               <h5 class="pt-4 m-0 pb-0">FINACIALS.</h5>
+               <p class="pb-2">Custom perfomance data.</p>
+             </div>
+             <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+               <h5 class="pt-4 m-0 pb-0">ANNIVERSARY.</h5>
+               <p class="pb-2">Make it social.</p>
+             </div>
+                <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+                  <h5 class="pt-4 m-0 pb-0">TENURE.</h5>
+                  <p class="pb-2">Experience goes a long way.</p>
+                </div>
+                <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+                  <h5 class="pt-4 m-0 pb-0">CLASSIFY.</h5>
+                  <p class="pb-2">Sort. Filter. Pivot</p>
+                 </div>
+                <div class="col-lg-3 col-xl-3 col-md-10 ml-md-1 col-10 mt-2 mx-auto m-md-1 m-lg-1 text-center">
+                   <h5 class="pt-4 m-0 pb-0">MEDIA.</h5>
+                   <p class="pb-2">Choose channels to follow.</p>
+                </div>
+        </div>
+        <div class="row">
+          <div class=" more col-lg-3 col-xl-3 col-md-10 col-sm-10 col-10 mt-md-2 mt-sm-2 mt-2" style="border:none;">
+            <a class="text-center">
+              <p (click)="show()">Show More</p>
+            </a>
+          </div>
+    </div>
+    </div>
+    <div class="row mt-5">
+      <img [routerLink]="['/home']" class=" logo float-left mb-5 d-none d-sm-none d-md-none d-lg-inline d-xl-inline" src="../assets/img/logo-black.svg"
+        alt="">
+    </div>
+  </div>
+    

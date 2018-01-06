@@ -1,0 +1,25 @@
+  <div class="container mt-5" [BackDirective]="'white'">
+          <div class="row mt-5">
+            <img [routerLink]="['/home']" class="mt-5 logo-mobile mx-auto mb-5 d-inline d-sm-inline d-md-inline d-lg-none d-xl-none" src="../assets/img/logo-black.svg"
+              alt="">
+          </div>
+    <div class="row contact-row mt-5">
+      <div class="col-12  col-sm-12  col-md-12  col-lg-12 col-xl-12 my-auto mt-5">
+       <form class="mx-auto" #contact="ngForm" (ngSubmit)="onSubmit(contact.value)">
+          <div class="form-group">
+            <input type="text" class="form-control text-center" required (ngModel)="model.email" name="email" placeholder="ENTER EMAIL"
+              #email="ngModel">
+          </div>
+          <hr>
+          <div class="form-group">
+            <textarea placeholder="ENTER MESSAGE" class="form-control" required (ngModel)="model.message" rows="5" name="message"></textarea>
+          </div>
+          <button type="submit" [disabled]="!contact.form.valid" class="btn float-right">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+   <div class="row ">
+     <img [routerLink]="['/home']" class="logo float-left mb-5 d-none d-sm-none d-md-none d-lg-inline m-lg-5 d-xl-inline" src="../assets/img/logo-black.svg"
+            alt="">
+  </div>
