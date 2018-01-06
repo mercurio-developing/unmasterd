@@ -6,21 +6,21 @@ var nodemailer = require("nodemailer");
 var bodyParser = require('body-parser');
 var forceSsl = require('force-ssl-heroku');
 var cors = require('cors');
-// var fs = require('fs');
+var fs = require('fs');
 
 var app = express();
 
 app.use(forceSsl);
 app.use(cors())
 
-// app.get('/downloads', function (req, res) {
-//     var filePath = "/files/unmasterd Website.pdf";
+app.get('/downloads', function (req, res) {
+    var filePath = "/files/unmasterd Website.pdf";
 
-//     fs.readFile(__dirname + filePath, function (err, data) {
-//         res.contentType("application/pdf");
-//         res.send(data);
-//     });
-// });
+    fs.readFile(__dirname + filePath, function (err, data) {
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
 
 
 app.use(forceSsl);
