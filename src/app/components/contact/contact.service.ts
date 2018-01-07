@@ -10,6 +10,7 @@ export class ContactService {
   errors;
 
   sendEmail(dataEmail) {
+    console.log(dataEmail)
     this.http.post('https://unmasterd-test.herokuapp.com:443/sendmail', dataEmail)
     .subscribe((data) => {
       console.log(data)
@@ -17,10 +18,12 @@ export class ContactService {
       error => {
         this.errors = error;
         console.log(error)
-      },
-       () => {
-         this.router.navigate(['emailsuccess'])
-        }
+      }
+      // ,
+      //  () => {
+
+      //    this.router.navigate(['emailsuccess'])
+      //   }
     )
   }
 }
