@@ -10,19 +10,23 @@ import { Router } from '@angular/router'
 })
 export class NavbarComponent implements OnInit {
   errors;
-  data:any;
+  data:any = [];
   constructor(private navService:NavbarService,private router:Router) { }
 
   ngOnInit() {
-    console.log(this.data)
   }
   
   pdf() {
+    event.preventDefault();
+
     this.navService.getFile('https://clarividencia-fotografia.herokuapp.com:443/downloads')
       .subscribe(
       fileData => {
-        this.data = fileData;
-        return fileData
+
+        console.log(fileData)
+        let datin = fileData
+        this.data.push(datin);
+        console.log(this.data)
                 // FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
