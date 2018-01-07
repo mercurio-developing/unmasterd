@@ -22,11 +22,6 @@ app.get('/downloads', function (req, res) {
     });
 });
 
-
-app.use(forceSsl);
-app.use(cors())
-
-
 // configuration ===========================================
 var smtpTransport = nodemailer.createTransport({
     service: "gmail",
