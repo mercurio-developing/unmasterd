@@ -27,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'eir', component: EirComponent },
   { path: 'db', component: DbComponent },
+  { path: 'emailsucess', component: EmailsuccessComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
 

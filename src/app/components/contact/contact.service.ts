@@ -19,7 +19,7 @@ export class ContactService {
         console.log(error)
       },
        () => {
-         this.router.navigate(['home'])
+         this.router.navigate(['emailsuccess'])
         }
     )
   }
