@@ -21,6 +21,9 @@ export class NavbarComponent implements OnInit {
       fileData => {
         console.log(fileData)
         console.log('gato')
+        event.preventDefault()
+        console.log(fileData)
+        console.log('gato')
         FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
