@@ -16,8 +16,8 @@ export class NavbarComponent implements OnInit {
   }
   
   pdf() {
-    event.preventDefault();
-    this.navService.getFile('https://clarividencia-fotografia.herokuapp.com:443/downloads')
+    event.preventDefault()
+    this.navService.getFile('https://clarividencia-fotografia.herokuapp.com/downloads')
       .subscribe(
       fileData => {
         console.log(fileData)
