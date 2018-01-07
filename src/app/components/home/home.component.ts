@@ -8,12 +8,13 @@ import * as FileSaver from 'file-saver';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers:[NavbarService]
 })
 
 
 export class HomeComponent implements OnInit {
-  
+
   errors:any;
   showImg1: boolean = false;
   showImg2: boolean = false;
