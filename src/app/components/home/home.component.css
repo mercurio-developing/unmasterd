@@ -142,7 +142,7 @@ h1{
         height:100%;
     } 
        .hoverImg1{
-    background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(255,255,255,0.4)), url('../../../assets/img/cover-back.png');
+    background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(255,255,255,0.4)), url('../../../assets/img/cover-back.pngitg');
     background-position: right bottom;
     background-size:100% 25%;
     -webkit-background-size: cover;
