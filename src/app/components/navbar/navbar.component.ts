@@ -21,14 +21,15 @@ export class NavbarComponent implements OnInit {
     this.navService.getFile('https://clarividencia-fotografia.herokuapp.com:443/downloads')
       .subscribe(
       fileData => {
-        console.log(fileData)
-        FileSaver.saveAs(fileData, "sample.pdf")
+        return fileData
+                // FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
           this.errors = error
          console.log(this.errors)
-      }), () => {
-        this.router.navigate(['emailsuccess'])
+      })
+      // , () => {
+      //   this.router.navigate(['emailsuccess'])
 };
   }
 }
