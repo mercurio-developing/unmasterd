@@ -45,7 +45,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/dist'));
-app.use((req, res) => res.sendfile(__dirname + '/dist/index.html'));
+// app.use((req, res) => res.sendfile(__dirname + '/dist/index.html'));
 
 /*
     Here we are configuring our SMTP Server details.
@@ -69,9 +69,9 @@ app.post('/sendmail', function (req, res) {
     console.log(req.body)
     
     var mailOptions = {
-        from: ''+ req.body.name +'<'+ req.body.email +'>', // sender address
+        from: req.body.email, // sender address
         subject: 'Contacto desde UNMASTERED', // Subject line
-        html: '<p>'+req.body.name+'</p></br><p><b>'+req.body.message+' from '+req.body.email+'</b></p>', // html body
+        html: '</br><p><b>MESSAGE:'+req.body.message+' <br>from: '+req.body.email+'</b></p>', // html body
         to: 'mercuriodevelop@gmail.com'
     }
 
