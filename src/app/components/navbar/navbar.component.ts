@@ -2,6 +2,7 @@ import { Component, OnInit,Injectable } from '@angular/core';
 import { NavbarService } from  './navbar.service'
 import * as FileSaver from 'file-saver';
 import { Router } from '@angular/router'
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy, ElementRef, Renderer2, Input, AfterViewIn
 import { Observable } from 'rxjs';
 import { DOCUMENT } from '@angular/platform-browser';
 import { ISubscription } from "rxjs/Subscription";
+import { NavbarService } from "../navbar/navbar.service"
+import * as FileSaver from 'file-saver';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   width: number = document.documentElement.clientWidth;
 
-  constructor(private renderer: Renderer2, private el: ElementRef, @Inject(DOCUMENT) private docu) {
+  constructor(private navService:NavbarService,private renderer: Renderer2, private el: ElementRef, @Inject(DOCUMENT) private docu) {
 
     const $resizeEvent = Observable.fromEvent(window, 'resize')
 
@@ -53,5 +55,17 @@ export class HomeComponent implements OnInit {
   ngOnDestroy() { 
     this.subscription.unsubscribe;
     this.show = false    
+  }
+
+  pdf() {
+    this.navService.getFile('https://unmasterd-test.herokuapp.com:443/downloads')
+      .subscribe(
+      fileData => {
+        FileSaver.saveAs(fileData, "sample.pdf")
+      },
+      error => {
+        this.errors = error
+        console.log(this.errors)
+      })
   }
 }
