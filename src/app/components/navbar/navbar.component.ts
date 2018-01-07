@@ -9,22 +9,24 @@ import * as FileSaver from 'file-saver';
   providers:[NavbarService]
 })
 export class NavbarComponent implements OnInit {
-
+  errors;
   constructor(private navService:NavbarService) { }
 
   ngOnInit() {
   }
   
   pdf() {
-    this.navService.getFile('https://clarividencia-fotografia.herokuapp.com/downloads')
+    event.preventDefault();
+    this.navService.getFile('https://clarividencia-fotografia.herokuapp.com:443/downloads')
       .subscribe(
       fileData => {
         console.log(fileData)
+        console.log('gato')
         FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
-        event.preventDefault();
-        console.log(error)
+          this.errors = error
+         console.log(this.errors)
       });
   }
 }
