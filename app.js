@@ -13,14 +13,6 @@ var app = express();
 app.use(forceSsl);
 app.use(cors())
 
-app.get('/downloads', function (req, res) {
-    var filePath = "/files/unmasterd Website.pdf";
-
-    fs.readFile(__dirname + filePath, function (err, data) {
-        res.contentType("application/pdf");
-        res.send(data);
-    });
-});
 
 // configuration ===========================================
 var smtpTransport = nodemailer.createTransport({
@@ -63,6 +55,15 @@ app.use((req, res) => res.sendfile(__dirname + '/dist/index.html'));
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
+app.get('/downloads', function (req, res) {
+    var filePath = "./assets/unmasterd Website.pdf";
+
+    fs.readFile(__dirname + filePath, function (err, data) {
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+ 
 
 app.post('/sendmail', function (req, res) {
     console.log(req.body)
