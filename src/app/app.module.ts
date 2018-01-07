@@ -30,7 +30,7 @@ const appRoutes: Routes = [
   { path: 'db', component: DbComponent },
   { path: 'emailsuccess', component: EmailsuccessComponent },
   { path: '404', component: NotFoundComponent },
-  // { path: '**', redirectTo: '/404' }
+  { path: '**', redirectTo: '/404' }
 ]
 
 @NgModule({
