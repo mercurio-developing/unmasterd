@@ -1,6 +1,7 @@
 p{
-    font-size: 14px;
     font-family: Courier New;
+    font-style: bold;
+    width: 200px;
 }
 
 .container{

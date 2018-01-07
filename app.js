@@ -16,10 +16,12 @@ app.use(cors())
 app.get('/downloads', function (req, res) {
     var filePath = "/files/unmasterd Website.pdf";
 
-    fs.readFile(__dirname + filePath, function (err, data) {
-        res.contentType("application/pdf");
-        res.send(data);
-    });
+    // fs.readFile(__dirname + filePath, function (err, data) {
+    //     res.contentType("application/pdf");
+    //     res.send(data);
+    // });
+
+    res.download(__dirname + filePath)
 });
 
 

@@ -17,6 +17,7 @@ import { BackDirective } from './shared/directives/back.directive';
 import { HeaderBlackComponent } from './components/header-black/header-black.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { EmailsuccessComponent } from './components/emailsuccess/emailsuccess.component';
+import { EmailValidatorDirective } from './shared/directives/emailvalidator.directive';
 
 
 const appRoutes: Routes = [
@@ -27,11 +28,9 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'eir', component: EirComponent },
   { path: 'db', component: DbComponent },
-  { path: 'emailsucess', component: EmailsuccessComponent },
+  { path: 'emailsuccess', component: EmailsuccessComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
-
-
 ]
 
 @NgModule({
@@ -48,7 +47,8 @@ const appRoutes: Routes = [
     BackDirective,
     HeaderBlackComponent,
     NotFoundComponent,
-    EmailsuccessComponent
+    EmailsuccessComponent,
+    EmailValidatorDirective  
   ],
   imports: [
     BrowserModule,

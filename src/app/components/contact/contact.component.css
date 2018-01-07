@@ -19,6 +19,18 @@ input{
     font-size:14px;
     color:black;
 }
+
+.has-danger{
+    border:1px solid rgba(255,0,0, 0.4);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255,0,0, 0.4);
+}
+
+.has-success{
+    border:1px solid rgba(0,255,0, 0.4);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.2);
+
+}
+
 button{
         background-color:#000;
         color:#fff;
@@ -27,10 +39,16 @@ button{
 
 }
 textarea{
-    border:none;
+    /* border:none; */
     font-family:Courier New;
     font-size:14px;
     color:black;
+    resize: false;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow:auto;
 }
 
 form{
@@ -55,7 +73,6 @@ hr{
 }
 
 button:focus {
-  border-color: #FF0000;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.2);
 }
 

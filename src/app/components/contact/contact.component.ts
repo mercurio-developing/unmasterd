@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ContactService } from './contact.service';
+import { EmailValidatorDirective } from '../../shared/directives/emailvalidator.directive';
+
 
 @Component({
   selector: 'app-contact',
