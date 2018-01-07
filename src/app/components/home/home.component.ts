@@ -11,8 +11,10 @@ import * as FileSaver from 'file-saver';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent implements OnInit {
 
+export class HomeComponent implements OnInit {
+  
+  errors:any;
   showImg1: boolean = false;
   showImg2: boolean = false;
 
