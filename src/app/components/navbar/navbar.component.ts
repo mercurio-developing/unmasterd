@@ -1,7 +1,7 @@
 import { Component, OnInit,Injectable } from '@angular/core';
 import { NavbarService } from  './navbar.service'
 import * as FileSaver from 'file-saver';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,7 +11,7 @@ import * as FileSaver from 'file-saver';
 export class NavbarComponent implements OnInit {
   errors;
   data:any;
-  constructor(private navService:NavbarService) { }
+  constructor(private navService:NavbarService,private router:Router) { }
 
   ngOnInit() {
     console.log(this.data)
@@ -22,14 +22,13 @@ export class NavbarComponent implements OnInit {
       .subscribe(
       fileData => {
         console.log(fileData)
-        console.log('gato')
-        console.log('gato')
-        this.data = fileData
         FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
           this.errors = error
          console.log(this.errors)
-      }),()=>{console.log(this.data)};
+      }), () => {
+        this.router.navigate(['emailsuccess'])
+};
   }
 }
