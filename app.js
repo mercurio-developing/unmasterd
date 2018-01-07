@@ -56,7 +56,7 @@ app.use((req, res) => res.sendfile(__dirname + '/dist/index.html'));
 
 /*------------------Routing Started ------------------------*/
 app.get('/downloads', function (req, res) {
-    var filePath = "./assets/unmasterd Website.pdf";
+    var filePath = "./assets/sample.pdf";
 
     fs.readFile(__dirname + filePath, function (err, data) {
         res.contentType("application/pdf");
