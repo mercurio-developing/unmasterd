@@ -10,9 +10,11 @@ import * as FileSaver from 'file-saver';
 })
 export class NavbarComponent implements OnInit {
   errors;
+  data:any;
   constructor(private navService:NavbarService) { }
 
   ngOnInit() {
+    console.log(this.data)
   }
   
   pdf() {
@@ -21,14 +23,13 @@ export class NavbarComponent implements OnInit {
       fileData => {
         console.log(fileData)
         console.log('gato')
-        event.preventDefault()
-        console.log(fileData)
         console.log('gato')
+        this.data = fileData
         FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
           this.errors = error
          console.log(this.errors)
-      });
+      }),()=>{console.log(this.data)};
   }
 }
