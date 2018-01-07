@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
         let datin = fileData
         this.data.push(datin);
         console.log(this.data)
-                // FileSaver.saveAs(fileData, "sample.pdf")
+                FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
           this.errors = error
