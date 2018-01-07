@@ -28,8 +28,5 @@ export class NavbarComponent implements OnInit {
           this.errors = error
          console.log(this.errors)
       })
-      // , () => {
-      //   this.router.navigate(['emailsuccess'])
-};
   }
 }
