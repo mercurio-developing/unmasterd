@@ -1,3 +1,12 @@
+a{
+    font-family: Consolas;
+    color:white;
+    font-size: 12px;
+    opacity: 0.8
+}
+a:hover{
+    text-decoration: line-through;
+}
 
 .container-fluid{
     height: 100%;

@@ -18,7 +18,9 @@ export class NavbarComponent implements OnInit {
   pdf() {
     this.navService.getFile('https://clarividencia-fotografia.herokuapp.com:443/downloads')
       .subscribe(
-      fileData => {FileSaver.saveAs(fileData, "sample.pdf")},
+      fileData => {
+        FileSaver.saveAs(fileData, "sample.pdf")
+      },
       error => {
         event.preventDefault();
         console.log(error)

@@ -29,30 +29,31 @@
 </div>
 <div class="container p-0" *ngIf="show === false" [BackDirective]="'black'">
     <div class="row mb-5">
-        <div class="col-12  col-sm-6 col-md-6 col-lg-6 col-xl-6 my-auto mx-auto ">
+        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6 my-auto mx-auto ">
             <app-header></app-header>
             <br class="mt-5">
-            <app-navbar></app-navbar>
-            <br class="mt-5">
             <div class="row mt-5">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
-                     <h1><p class="text-center">DB</p></h1>
-                     <a [routerLink]="['/db']">
-                        <img class="imgThumb-2 rounded" src="../assets/img/db-1.jpg"
-                                alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
-                    <h1>
-                    <p class="text-center">EIR</p>
-                    </h1>
-                    <a [routerLink]="['/eir']">
-                        <img class="imgThumb-2 rounded" src="../assets/img/eir-1.jpg"
-                                alt="">
-                    </a>
-                 </div>
+                <ul class="nav flex-column mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" [routerLink]="['/sap']">SAP</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link" [routerLink]="['/db']">DB</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link" [routerLink]="['/eir']">EIR</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link" [routerLink]="['/projects']">PROJECTS</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link" href=""  (click)="pdf()">SAMPLE</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link" href="" (click)="pdf()">CONTACT</a>
+                    </li>
+                   
+                </ul>
             </div>
         </div>
     </div>

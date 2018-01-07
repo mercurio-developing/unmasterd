@@ -52,6 +52,8 @@ export class EirComponent implements OnInit,OnDestroy {
     }
     if (this.width < 768) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+      this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
+
       console.log(this.el.nativeElement.children[0])
 
       change()

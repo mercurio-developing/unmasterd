@@ -57,11 +57,16 @@
                 </div>
         </div>
         <div class="row">
-          <div class=" more col-lg-3 col-xl-3 col-md-10 col-sm-10 col-10 mt-md-2 mt-sm-2 mt-2" style="border:none;">
+          <div  *ngIf="showButton === true" class="more col-lg-3 col-xl-3 col-md-10 col-sm-10 col-10 mt-md-2 mt-sm-2 mt-2" style="border:none;">
             <a class="text-center">
               <p (click)="show()">Show More</p>
             </a>
           </div>
+                    <div  *ngIf="showButton === false" class="more col-lg-3 col-xl-3 col-md-10 col-sm-10 col-10 mt-md-2 mt-sm-2 mt-2" style="border:none;">
+                      <a class="text-center">
+                        <p (click)="show()">Show Less</p>
+                      </a>
+                    </div>
     </div>
     </div>
     <div class="row mt-5">

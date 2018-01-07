@@ -34,10 +34,8 @@ export class HomeComponent implements OnInit {
 
       if (this.width <= 992){
           this.show = false;
-          this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
       } else {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
-        window.scrollTo(0, 0);
         this.show = true;
       }
     });
@@ -47,12 +45,8 @@ export class HomeComponent implements OnInit {
     this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
     if (this.width <= 992) {
       this.show = false;
-      this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
     } else {
-      this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
       this.show = true;
-
-      window.scrollTo(0, 0);
     }
   }
 

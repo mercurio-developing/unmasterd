@@ -1,0 +1,52 @@
+[debug] [2018-01-07T00:19:24.786Z] ----------------------------------------------------------------------
+[debug] [2018-01-07T00:19:24.788Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-01-07T00:19:24.789Z] CLI Version:   3.16.0
+[debug] [2018-01-07T00:19:24.789Z] Platform:      darwin
+[debug] [2018-01-07T00:19:24.789Z] Node Version:  v6.11.0
+[debug] [2018-01-07T00:19:24.789Z] Time:          Sat Jan 06 2018 19:19:24 GMT-0500 (-05)
+[debug] [2018-01-07T00:19:24.789Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-07T00:19:24.802Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-07T00:19:24.802Z] > authorizing via signed-in user
+[debug] [2018-01-07T00:19:24.805Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/unmasterd-test  
+  
+ Sat Jan 06 2018 19:19:24 GMT-0500 (-05)
+[debug] [2018-01-07T00:19:26.841Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T00:19:26.843Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/unmasterd-test/tokens  
+  
+ Sat Jan 06 2018 19:19:26 GMT-0500 (-05)
+[debug] [2018-01-07T00:19:27.598Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'unmasterd-test'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-01-07T00:19:29.182Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/unmasterd-test/uploads/-L2Cz7nD4_Yc47q2DLot?fileCount=48&message=  
+  
+ Sat Jan 06 2018 19:19:29 GMT-0500 (-05)
+[debug] [2018-01-07T00:27:15.005Z] ----------------------------------------------------------------------
+[debug] [2018-01-07T00:27:15.007Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-01-07T00:27:15.008Z] CLI Version:   3.16.0
+[debug] [2018-01-07T00:27:15.008Z] Platform:      darwin
+[debug] [2018-01-07T00:27:15.008Z] Node Version:  v6.11.0
+[debug] [2018-01-07T00:27:15.008Z] Time:          Sat Jan 06 2018 19:27:15 GMT-0500 (-05)
+[debug] [2018-01-07T00:27:15.008Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-07T00:27:15.018Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-07T00:27:15.019Z] > authorizing via signed-in user
+[debug] [2018-01-07T00:27:15.020Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/unmasterd-test  
+  
+ Sat Jan 06 2018 19:27:15 GMT-0500 (-05)
+[debug] [2018-01-07T00:27:16.173Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T00:27:16.174Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/unmasterd-test/tokens  
+  
+ Sat Jan 06 2018 19:27:16 GMT-0500 (-05)
+[debug] [2018-01-07T00:27:16.811Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'unmasterd-test'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-01-07T00:27:20.336Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/unmasterd-test/uploads/-L2D-voJkLVUTiBhMnEl?fileCount=48&message=  
+  
+ Sat Jan 06 2018 19:27:20 GMT-0500 (-05)

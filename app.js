@@ -58,6 +58,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/dist'));
+app.use((req, res) => res.sendfile(__dirname + '/dist/index.html'));
 
 /*
     Here we are configuring our SMTP Server details.

@@ -13,6 +13,7 @@ export class DbComponent implements OnInit,OnDestroy {
   private subscription:ISubscription;
   
   showRow:Boolean = false;
+  showButton: Boolean = true;
 
   width: number = document.documentElement.clientWidth;
 
@@ -45,6 +46,8 @@ export class DbComponent implements OnInit,OnDestroy {
 
   show(){
     this.showRow = !this.showRow
+    this.showButton = !this.showButton
+
     if (this.showRow === true && this.width < 990){
     this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
     }else{
