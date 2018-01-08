@@ -70,8 +70,8 @@ app.post('/sendmail', function (req, res) {
     
     var mailOptions = {
         from: req.body.email, // sender address
-        subject: 'Contacto desde UNMASTERED', // Subject line
-        html: '</br><p><b>MESSAGE:'+req.body.message+' <br>from: '+req.body.email+'</b></p>', // html body
+        subject: 'UNMASTERED contact', // Subject line
+        html: '</br><div><p><b>MESSAGE:'+req.body.message+' </div><div><br>from: '+req.body.email+'</b></p></div>', // html body
         to: 'eddienejgonzales@gmail.com'
     }
 
