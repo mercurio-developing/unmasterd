@@ -69,11 +69,10 @@ app.post('/sendmail', function (req, res) {
     console.log(req.body)
     
     var mailOptions = {
-        from: req.body.email, // sender address
-        subject: 'UNMASTERED contact', // Subject line
-        html: '<h1>UNMASTERED CONTACT</h1></br><div><p><b>MESSAGE:</br></b>'+req.body.message+' </div><div><br>from: '+req.body.email+'</p></div>', // html body
-        to:'mercuriodevelop@gmail.com'
-        // to: 'eddienejgonzales@gmail.com'
+        from: req.body.email, 
+        subject: 'UNMASTERD contact', 
+        html: '<h1>UNMASTERD CONTACT</h1></br><div><p><b>MESSAGE:</br></b>'+req.body.message+' </div><div><br>from: '+req.body.email+'</p></div>', // html body
+        to: 'eddienejgonzales@gmail.com'
     }
 
     smtpTransport.sendMail(mailOptions, function (error, info) {
