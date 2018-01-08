@@ -54,18 +54,11 @@ h1{
 .imgThumb{
     width: 300px;
     height: 300px;
-}
-
-.imgThumb-2{
-    width: 300px;
-    height: 300px;
-}
-.imgThumb-2:hover{
-    border:1px solid rgba(255,255,255,0.8);
+    border:2px solid black;
 }
 
 .hoverImg1{
-    background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(255,255,255,0.4)), url('../../../assets/img/cover-back.png');
+    background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(73, 73, 73, 0.1)), url('../../../assets/img/cover-back.png');
     background-position: right bottom;
     background-size:100% auto;
     -webkit-background-size: cover;
@@ -77,7 +70,7 @@ h1{
     animation: myfirst 3s ;
 }
 .hoverImg2{
-    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(255,255,255,0.4)), url('../../../assets/img/cover-back.png');
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(73, 73, 73, 0.1)), url('../../../assets/img/cover-back.png');
     background-position: left bottom;
     background-size:100% auto;
     -webkit-background-size: cover;
@@ -142,7 +135,7 @@ h1{
         height:100%;
     } 
        .hoverImg1{
-    background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(255,255,255,0.4)), url('../../../assets/img/cover-back.png');
+    background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(73, 73, 73, 0.1)), url('../../../assets/img/cover-back.png');
     background-position: right bottom;
     background-size:100% 25%;
     -webkit-background-size: cover;
@@ -153,16 +146,16 @@ h1{
     -webkit-animation: myfirst 3s ; /* Chrome, Safari, Opera */
     animation: myfirst 3s ;
 }
-.hoverImg2{
-    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(255,255,255,0.4)), url('../../../assets/img/cover-back.png');
-    background-position: left bottom;
-    background-size:100% 25%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    .hoverImg2{
+        background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(73, 73, 73, 0.1)), url('../../../assets/img/cover-back.png');
+        background-position: left bottom;
+        background-size:100% 25%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 
-    -webkit-animation: myfirst 3s ; /* Chrome, Safari, Opera */
-    animation: myfirst 3s ;
-  }
+        -webkit-animation: myfirst 3s ; /* Chrome, Safari, Opera */
+        animation: myfirst 3s ;
+    }
 }

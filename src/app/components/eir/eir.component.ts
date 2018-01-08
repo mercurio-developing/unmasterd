@@ -36,7 +36,6 @@ export class EirComponent implements OnInit,OnDestroy {
         change();
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
-
       }else {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
         change();
