@@ -38,6 +38,7 @@
     "force-ssl-heroku": "^1.0.2",
     "jquery": "^3.2.1",
     "nodemailer": "^4.4.1",
+    "pinkie-promise": "git+https://github.com/floatdrop/pinkie-promise.git",
     "popper.js": "^1.13.0",
     "rxjs": "^5.5.2",
     "typescript": "~2.4.2",
