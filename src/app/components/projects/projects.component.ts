@@ -17,3 +17,4 @@ export class ProjectsComponent implements OnInit {
     this.renderer.setStyle(this.document.body, 'overflow','scroll');
   }
 }
+
