@@ -20,8 +20,8 @@ var smtpTransport = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
     auth: {
-        user: "mercuriodevelop@gmail.com",
-        pass: "ladeterminacioneslallave"
+        user: "smtpunmasterd@gmail.com",
+        pass: "unmasterd123"
     },tls: {
         // do not fail on invalid certs
         rejectUnauthorized: false
@@ -72,7 +72,7 @@ app.post('/sendmail', function (req, res) {
         from: req.body.email, // sender address
         subject: 'Contacto desde UNMASTERED', // Subject line
         html: '</br><p><b>MESSAGE:'+req.body.message+' <br>from: '+req.body.email+'</b></p>', // html body
-        to: 'mercuriodevelop@gmail.com'
+        to: 'eddienejgonzales@gmail.com'
     }
 
     smtpTransport.sendMail(mailOptions, function (error, info) {
