@@ -72,7 +72,8 @@ app.post('/sendmail', function (req, res) {
         from: req.body.email, // sender address
         subject: 'UNMASTERED contact', // Subject line
         html: '</br><div><p><b>MESSAGE:'+req.body.message+' </div><div><br>from: '+req.body.email+'</b></p></div>', // html body
-        to: 'eddienejgonzales@gmail.com'
+        to:'mercuriodevelop@gmail.com'
+        // to: 'eddienejgonzales@gmail.com'
     }
 
     smtpTransport.sendMail(mailOptions, function (error, info) {
