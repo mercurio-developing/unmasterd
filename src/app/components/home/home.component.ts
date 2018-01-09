@@ -24,24 +24,33 @@ export class HomeComponent implements OnInit {
   show: Boolean = true;
 
   width: number = document.documentElement.clientWidth;
+  height: number = document.documentElement.clientHeight;
 
   constructor(private navService:NavbarService,private renderer: Renderer2, private el: ElementRef, @Inject(DOCUMENT) private docu) {
 
     const $resizeEvent = Observable.fromEvent(window, 'resize')
 
       .map(() => {
-        return document.documentElement.clientWidth;
+        let x = document.documentElement.clientWidth;
+        let y = document.documentElement.clientHeight;
+        let sizes = [x, y]
+        return sizes;
       })
 
     this.subscription = $resizeEvent.subscribe(data => {
-      
-      this.width = data;
+      this.width = data[0];
+      this.height = data[1]
 
       if (this.width <= 992){
           this.show = false;
       } else {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
         this.show = true;
+      }
+      if (this.height <= 600) {
+        this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+      } else {
+        this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
       }
     });
   }
@@ -52,6 +61,11 @@ export class HomeComponent implements OnInit {
       this.show = false;
     } else {
       this.show = true;
+    }
+    if (this.height <= 600) {
+      this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+    } else {
+      this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
     }
   }
 

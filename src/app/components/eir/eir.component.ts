@@ -14,6 +14,8 @@ export class EirComponent implements OnInit,OnDestroy {
   private subscription: ISubscription;
 
   width:number = document.documentElement.clientWidth;
+  height:number = document.documentElement.clientHeight;
+
 
   constructor(private renderer: Renderer2, private el: ElementRef, @Inject(DOCUMENT) private docu) { 
     
@@ -27,19 +29,28 @@ export class EirComponent implements OnInit,OnDestroy {
     const $resizeEvent = Observable.fromEvent(window, 'resize')
     
     .map(() => {
-        return document.documentElement.clientWidth;
+      let x = document.documentElement.clientWidth;
+      let y = document.documentElement.clientHeight;
+      let sizes = [x,y]
+      return sizes;
       })
 
     this.subscription = $resizeEvent.subscribe(data => {
-      this.width = data;
-      if (this.width < 768){
+      this.width = data[0];
+      this.height = data[1]
+      if (this.width >= 768 && this.height <= 900) {
+        this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+        this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
+      } else {
+        this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
+      }
+
+      if (this.width <= 768){
         change();
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
-      }else {
-        this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
-        change();
       }
+      
     }); 
   }
   ngOnInit(){
@@ -49,16 +60,18 @@ export class EirComponent implements OnInit,OnDestroy {
       this.renderer.setStyle(this.el.nativeElement.children[0].children[2].children[2].children[0], 'max-width', this.width + 'px')
       this.renderer.setStyle(this.el.nativeElement.children[0].children[2].children[3].children[0], 'max-width', this.width + 'px')
     }
-    if (this.width < 768) {
+
+    if (this.width >= 768 && this.height <= 900) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
       this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
-
-      console.log(this.el.nativeElement.children[0])
-
-      change()
-    }else{
+    } else {
       this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
-      change()
+    }
+
+    if (this.width <= 768) {
+      change();
+      this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+      this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     }
   }
   ngOnDestroy() {

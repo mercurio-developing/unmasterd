@@ -12,11 +12,9 @@ export class ContactService {
   sendEmail(dataEmail) {
     this.http.post('https://unmasterd.herokuapp.com:443/sendmail', dataEmail)
     .subscribe((data) => {
-      console.log(data)
     },
       error => {
         this.errors = error;
-        console.log(error)
       },() => {
          this.router.navigate(['emailsuccess'])
         }
