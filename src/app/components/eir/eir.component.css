@@ -84,16 +84,16 @@ h1 {
   font-size: 13.5px;
 }
 .accordion ul li:nth-child(1) {
-  background-image: url('../../../assets/img/acor-1.jpg');
+  background-image: url('../../../assets/img/slide-1.png');
 }
 .accordion ul li:nth-child(2) {
-  background-image: url('../../../assets/img/acor-2.jpg');
+  background-image: url('../../../assets/img/slide-2.png');
 }
 .accordion ul li:nth-child(3) {
-  background-image: url('../../../assets/img/acor-3.jpg');
+  background-image: url('../../../assets/img/slide-3.png');
 }
 .accordion ul li:nth-child(4) {
-  background-image: url('../../../assets/img/acor-4.jpg');
+  background-image: url('../../../assets/img/slide-4.png');
 }
 
 .accordion ul:hover li {
