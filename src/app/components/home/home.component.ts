@@ -70,7 +70,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnDestroy() { 
-    this.subscription.unsubscribe;
+    this.subscription.unsubscribe();
     this.show = false    
   }
 

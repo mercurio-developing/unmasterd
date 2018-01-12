@@ -32,23 +32,17 @@ export class DbComponent implements OnInit,OnDestroy {
 
   this.subscription = $resizeEvent.subscribe(data => {
       this.width = data[0];
-      if (this.showRow === true && this.width < 990) {
+      if (this.showRow === true && this.width <= 990) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
       } else {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
       }
-
       this.height = data[1]
-
-      if (this.width >= 990 && this.height <= 768 || this.width >= 990 && this.height <= 768 && this.showRow === true  ) {
+      if ((this.width >= 990 && this.height <= 768) || (this.width >= 990 && this.height <= 768 && this.showRow === true)  ) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
-      } else {
-        this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
       }
-
     }); 
-    
   }  
 
   ngOnInit() {
@@ -56,23 +50,21 @@ export class DbComponent implements OnInit,OnDestroy {
     this.showRow = false;
   }
 
-  ngOnDestroy(){this.subscription.unsubscribe}
+  ngOnDestroy(){this.subscription.unsubscribe()}
 
   show(){
     this.showRow = !this.showRow
     this.showButton = !this.showButton
-
-    if (this.showRow === true && this.width < 990){
+    if (this.showRow === true && this.width <= 990){
+      console.log('gato')
     this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
     }else{
     this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
     }
-
     if (this.width >= 990 && this.height <= 768 && this.showRow === true) {
+      console.log('gato 2')
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
       this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
-    } else {
-      this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
-    }
+    } 
   }
 }
