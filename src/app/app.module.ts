@@ -23,7 +23,7 @@ import { ChildProjectsComponent } from './components/projects/child-projects/chi
 
 
 const appRoutes: Routes = [
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'sap', component: SapComponent },
   { path: 'projects', component: ProjectsComponent },
@@ -31,8 +31,8 @@ const appRoutes: Routes = [
   { path: 'eir', component: EirComponent },
   { path: 'db', component: DbComponent },
   { path: 'emailsuccess', component: EmailsuccessComponent },
-  { path: '404', component: NotFoundComponent }
-  // { path: '**', redirectTo: '/404' }
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ]
 
 @NgModule({

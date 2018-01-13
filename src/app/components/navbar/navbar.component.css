@@ -1,9 +1,13 @@
 a{
     font-family: Consolas;
-    color:white;
+    color:white !important;
     font-size: 12px;
     opacity: 0.8
 }
 a:hover{
-    text-decoration: line-through;
+    text-decoration: line-through !important;
+}
+
+.sample{
+    cursor:pointer;
 }

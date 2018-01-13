@@ -12,23 +12,42 @@ import { Router } from '@angular/router'
 export class NavbarComponent implements OnInit {
   errors;
   data:any = [];
+  showLink:boolean = false;
+
   constructor(private navService:NavbarService,private router:Router) { }
 
   ngOnInit() {
+    this.showLink = false;
   }
   
-  pdf() {
+  pdfEIR() {
     event.preventDefault();
-    this.navService.getFile('http://localhost:3000/downloads')
+    this.navService.getFile('https://unmasterd.herokuapp.com:443/eir')
       .subscribe(
       fileData => {
         console.log(fileData)
-        FileSaver.saveAs(fileData, "sample.pdf")
+        FileSaver.saveAs(fileData, "eir-sample.pdf")
       },
       error => {
-          this.errors = error
-          console.log(this.errors)
-
+        this.errors = error
       })
+  }
+
+  pdfDB() {
+    event.preventDefault();
+    console.log('gat')
+    this.navService.getFile('https://unmasterd.herokuapp.com:443/db')
+      .subscribe(
+      fileData => {
+        console.log(fileData)
+        FileSaver.saveAs(fileData, "db-sample.pdf")
+      },
+      error => {
+        this.errors = error
+      })
+  }
+
+  showLinks(){
+    this.showLink = !this.showLink;
   }
 }

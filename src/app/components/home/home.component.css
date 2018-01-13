@@ -1,3 +1,36 @@
+.row-link a {
+    color:white;
+    font-family: Courier New;
+    font-size:12px;
+}
+input{
+    font-family: Courier New;
+    font-size:12px;
+}
+textarea{
+    font-family: Courier New;
+    font-size:12px;
+}
+button{
+    font-family: Courier New;
+    font-size:12px;
+}
+
+row-fix{
+    height: 35%;
+}
+
+.sample{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:white;
+    font-size:18px;
+}
+
 .logo{
     width: 180px;
     height: 50px;

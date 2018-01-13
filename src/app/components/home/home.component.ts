@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
   errors:any;
   showImg1: boolean = false;
   showImg2: boolean = false;
-
+  showLink:boolean = false;
+  
   private subscription: ISubscription;
 
   show: Boolean = true;
@@ -47,7 +48,7 @@ export class HomeComponent implements OnInit {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
         this.show = true;
       }
-      if (this.height <= 600) {
+      if (this.height <= 800) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
       } else {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
@@ -62,7 +63,7 @@ export class HomeComponent implements OnInit {
     } else {
       this.show = true;
     }
-    if (this.height <= 600) {
+    if (this.height <= 800) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
     } else {
       this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
@@ -74,18 +75,34 @@ export class HomeComponent implements OnInit {
     this.show = false    
   }
 
-  pdf() {
+  pdfEIR() {
     event.preventDefault();
-    this.navService.getFile('http://localhost:3000/downloads')
+    this.navService.getFile('https://unmasterd.herokuapp.com:443/eir')
       .subscribe(
       fileData => {
         console.log(fileData)
-        FileSaver.saveAs(fileData, "sample.pdf")
+        FileSaver.saveAs(fileData, "eir-sample.pdf")
       },
       error => {
         this.errors = error
-        console.log(this.errors)
-
       })
+  }
+
+  pdfDB() {
+    event.preventDefault();
+    console.log('gat')
+    this.navService.getFile('https://unmasterd.herokuapp.com:443/db')
+      .subscribe(
+      fileData => {
+        console.log(fileData)
+        FileSaver.saveAs(fileData, "db-sample.pdf")
+      },
+      error => {
+        this.errors = error
+      })
+  }
+
+  showLinks() {
+    this.showLink = !this.showLink
   }
 }

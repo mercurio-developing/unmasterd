@@ -3,6 +3,11 @@ a {
     font-family: Courier New;
     font-size:12px;
 }
+
+a:hover{
+    text-decoration: line-through;
+} 
+
 input{
     font-family: Courier New;
     font-size:12px;
