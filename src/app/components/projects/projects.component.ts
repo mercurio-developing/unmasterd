@@ -33,8 +33,10 @@ export class ProjectsComponent implements OnInit {
     this.width = data[0]
 
     this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+    this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     if (this.height <= 900) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+      this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     } 
     if (this.width >= 900) {
       this.mobile = false;
@@ -58,8 +60,10 @@ export class ProjectsComponent implements OnInit {
       this.mobile = true;
     }
     this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+    this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     if (this.height <= 900) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+      this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     } 
   }
   

@@ -14,6 +14,7 @@ export class DbComponent implements OnInit,OnDestroy {
   
   showRow:Boolean = false;
   showButton: Boolean = true;
+  mobile:Boolean = false;
 
   width: number = document.documentElement.clientWidth;
   height:number = document.documentElement.clientHeight;
@@ -34,17 +35,26 @@ export class DbComponent implements OnInit,OnDestroy {
       this.width = data[0];
       if (this.showRow === true && this.width <= 990) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+        this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
+        this.mobile = true;
+
       } else {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
+        this.mobile = false;
+
       }
       this.height = data[1]
       if ((this.width >= 990 && this.height <= 768) || (this.width >= 990 && this.height <= 768 && this.showRow === true)  ) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
+        this.mobile = false;
+
       }
       if (this.showRow === false && this.height <= 990 && this.width <= 990) {
-        console.log(this.height)
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+        this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
+        this.mobile = true;
+
       }
     }); 
   }  
@@ -54,6 +64,9 @@ export class DbComponent implements OnInit,OnDestroy {
     this.showRow = false;
     if (this.height <= 990 && this.width <= 990) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+      this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
+      this.mobile = true;
+
     }
   }
 
@@ -64,6 +77,7 @@ export class DbComponent implements OnInit,OnDestroy {
     this.showButton = !this.showButton
     if (this.showRow === true && this.width <= 990 || this.showRow === true && this.height <= 990){
     this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+    this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     }else{
     this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
     }

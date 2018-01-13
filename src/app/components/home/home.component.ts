@@ -50,6 +50,7 @@ export class HomeComponent implements OnInit {
       }
       if (this.height <= 800) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+        this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
       } else {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
       }
@@ -65,6 +66,7 @@ export class HomeComponent implements OnInit {
     }
     if (this.height <= 800) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
+      this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     } else {
       this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
     }
