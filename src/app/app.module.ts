@@ -20,6 +20,8 @@ import { EmailsuccessComponent } from './components/emailsuccess/emailsuccess.co
 import { EmailValidatorDirective } from './shared/directives/emailvalidator.directive';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChildProjectsComponent } from './components/projects/child-projects/child-projects.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 const appRoutes: Routes = [
@@ -52,13 +54,15 @@ const appRoutes: Routes = [
     EmailsuccessComponent,
     EmailValidatorDirective,
     FooterComponent,
-    ChildProjectsComponent  
+    ChildProjectsComponent,
+    CarouselComponent 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes, { useHash: true })
+    RouterModule.forRoot(appRoutes, { useHash: true }),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
