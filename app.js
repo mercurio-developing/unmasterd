@@ -59,7 +59,7 @@ app.use(express.static(__dirname + '/dist'));
 
 
 app.get('/eir', function (req, res) {
-    var myPdf = require('path').normalize(__dirname + '/dist/assets/db-sample.pdf');
+    var myPdf = require('path').normalize(__dirname + '/dist/assets/eir-sample.pdf');
 
     fs.readFile(myPdf, function (err, data) {
         res.contentType("application/pdf");
@@ -69,7 +69,7 @@ app.get('/eir', function (req, res) {
 });
 
 app.get('/db', function (req, res) {
-    var myPdf2 = require('path').normalize(__dirname + './assets/db-sample.pdf');
+    var myPdf2 = require('path').normalize(__dirname + '/dist/assets/db-sample.pdf');
     fs.readFile(myPdf2, function (err, data) {
         res.contentType("application/pdf");
         console.log(data)
