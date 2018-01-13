@@ -71,6 +71,9 @@ a p{
     position:absolute;
     left:8%;
 }
+    .fix p{
+        font-size:10.5px;
+    }
 @media (min-width: 576px) { 
 
     h3{
@@ -82,6 +85,9 @@ a p{
          position:absolute;
          left:9%;
      }
+    .fix p{
+        font-size:11px;
+    }
 }
 
 @media (min-width: 768px) {  
@@ -98,6 +104,9 @@ a p{
         .logo-mobile{
        position:relative;
        left:-8%;
+    }
+    .fix{
+        font-size:10px;
     }
 }
 
