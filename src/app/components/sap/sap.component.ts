@@ -27,7 +27,7 @@ export class SapComponent implements OnInit {
       this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
 
       this.height = data
-      if (this.height <= 600) {
+      if (this.height <= 900) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
 
@@ -41,7 +41,7 @@ export class SapComponent implements OnInit {
   ngOnInit() {
     this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
 
-    if (this.height <= 600) {
+    if (this.height <= 900) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
     } else {
       this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');

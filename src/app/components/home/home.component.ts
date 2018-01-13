@@ -75,15 +75,17 @@ export class HomeComponent implements OnInit {
   }
 
   pdf() {
-    event.preventDefault()
-    this.navService.getFile('https://unmasterd-test.herokuapp.com:443/downloads')
+    event.preventDefault();
+    this.navService.getFile('http://localhost:3000/downloads')
       .subscribe(
       fileData => {
+        console.log(fileData)
         FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
         this.errors = error
         console.log(this.errors)
+
       })
   }
 }

@@ -2,3 +2,7 @@ p {
     font-family:Courier New;
     font-size:12px;
 }
+
+.row-fix{
+    height: 425px;
+}

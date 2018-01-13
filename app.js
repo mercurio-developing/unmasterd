@@ -55,15 +55,27 @@ app.use(express.static(__dirname + '/dist'));
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
-app.get('/downloads', function (req, res) {
-    var filePath = "./assets/sample.pdf";
 
-    fs.readFile(__dirname + filePath, function (err, data) {
+
+
+app.get('/eir', function (req, res) {
+    var myPdf = require('path').normalize(__dirname + '/assets/eir-sample.pdf');
+
+    fs.readFile(myPdf, function (err, data) {
         res.contentType("application/pdf");
+        console.log(data)
         res.send(data);
     });
 });
- 
+
+app.get('/db', function (req, res) {
+    var myPdf2 = require('path').normalize(__dirname + '/assets/db-sample.pdf');
+    fs.readFile(myPdf2, function (err, data) {
+        res.contentType("application/pdf");
+        console.log(data)
+        res.send(data);
+    });
+});
 
 app.post('/sendmail', function (req, res) {
     console.log(req.body)
@@ -72,7 +84,7 @@ app.post('/sendmail', function (req, res) {
         from: req.body.email, 
         subject: 'UNMASTERD contact', 
         html: '<h1>UNMASTERD CONTACT</h1></br><div><p><b>MESSAGE:</br></b>'+req.body.message+' </div><div><br>from: '+req.body.email+'</p></div>', // html body
-        to: 'eddienejgonzales@gmail.com'
+        to: 'mercuriodevelop@gmail.com'
     }
 
     smtpTransport.sendMail(mailOptions, function (error, info) {

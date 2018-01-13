@@ -1,8 +1,9 @@
-<div class="container mt-0 mt-sm-0 mt-md-0 mt-lg-5 mt-xl-5 p-0" [BackDirective]="'white'">
+<div class="container mt-5 mt-sm-0 mt-md-0 mt-lg-5 mt-xl-5 p-0" [BackDirective]="'white'">
     <div class="row mt-0 mt-sm-0 mt-md-0 mt-lg-5 mt-xl-5">
-            <img [routerLink]="['/home']" class="logo-mobile w-100 mt-5 mb-5 d-inline d-sm-inline d-md-inline d-lg-none d-xl-none" src="../assets/img/logo-black.svg"
-              alt=""> 
-    </div>
+        <div class="col-12 pl-5 mt-5 pr-5">
+          <app-header-black></app-header-black>
+        </div>
+       </div>
   <div class="row mt-0  mt-sm-0 mt-md-0 mt-lg-5 mt-xl-5">
     <div class="accordion mx-auto d-none d-sm-none d-md-inline d-lg-inline d-xl-inline col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
       <ul>
@@ -35,4 +36,11 @@
   <img [routerLink]="['/home']" class="logo float-left mb-5 d-none d-sm-none d-md-none d-lg-inline d-xl-inline" src="../assets/img/logo-black.svg"
     alt="">
 </div>
+    <div class="row row-fix d-block d-sm-block d-md-block d-lg-none d-xl-none">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12 h-100">
+      </div>
+    </div>
+    <div class="row fixed-bottom d-inline d-sm-inline d-md-none d-lg-none d-xl-none mt-5" style="background-color:black;">
+      <app-footer class="w-100"></app-footer>
+    </div>
 </div>

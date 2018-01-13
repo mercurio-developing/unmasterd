@@ -27,33 +27,32 @@
          </div>
     </div>
 </div>
-<div class="container p-0" *ngIf="show === false" [BackDirective]="'black'">
+<div class="container"  *ngIf="show === false" [BackDirective]="'black'">
     <div class="row mb-5">
-        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6 my-auto mx-auto ">
-            <app-header></app-header>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 my-auto mx-auto ">
+                <div class="row mt-5 ml-2">
+                    <img class="logo float left" src="../assets/img/logo-white.svg" alt="">
+                </div>
             <br class="mt-5">
-            <div class="row mt-5">
-                <ul class="nav flex-column mx-auto">
-                    <li class="nav-item">
+            <div class="row row-nav">
+                <ul class="nav flex-column float-left w-100">
+                    <li class="nav-item p-4">
                         <a class="nav-link active" [routerLink]="['/sap']">SAP</a>
                     </li>
-                    <li class="nav-item pt-2">
+                    <li class="nav-item p-4">
                         <a class="nav-link" [routerLink]="['/db']">DB</a>
                     </li>
-                    <li class="nav-item pt-2">
+                    <li class="nav-item p-4">
                         <a class="nav-link" [routerLink]="['/eir']">EIR</a>
                     </li>
-                    <li class="nav-item pt-2">
+                    <li class="nav-item p-4">
                         <a class="nav-link" [routerLink]="['/projects']">PROJECTS</a>
-                    </li>
-                    <li class="nav-item pt-2">
-                        <a class="nav-link" href="" (click)="pdf()">SAMPLE</a>
-                    </li>
-                    <li class="nav-item pt-2">
-                        <a class="nav-link" [routerLink]="['/contact']" href="">CONTACT</a>
                     </li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="row mt-5">
+        <app-footer class="w-100"></app-footer>
     </div>
 </div>

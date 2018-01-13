@@ -19,13 +19,16 @@ export class NavbarComponent implements OnInit {
   
   pdf() {
     event.preventDefault();
-    this.navService.getFile('https://unmasterd.herokuapp.com:443/downloads')
+    this.navService.getFile('http://localhost:3000/downloads')
       .subscribe(
       fileData => {
+        console.log(fileData)
         FileSaver.saveAs(fileData, "sample.pdf")
       },
       error => {
           this.errors = error
+          console.log(this.errors)
+
       })
   }
 }

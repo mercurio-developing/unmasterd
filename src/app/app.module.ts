@@ -18,10 +18,12 @@ import { HeaderBlackComponent } from './components/header-black/header-black.com
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { EmailsuccessComponent } from './components/emailsuccess/emailsuccess.component';
 import { EmailValidatorDirective } from './shared/directives/emailvalidator.directive';
+import { FooterComponent } from './components/footer/footer.component';
+import { ChildProjectsComponent } from './components/projects/child-projects/child-projects.component';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'sap', component: SapComponent },
   { path: 'projects', component: ProjectsComponent },
@@ -29,8 +31,8 @@ const appRoutes: Routes = [
   { path: 'eir', component: EirComponent },
   { path: 'db', component: DbComponent },
   { path: 'emailsuccess', component: EmailsuccessComponent },
-  { path: '404', component: NotFoundComponent },
-  { path: '**', redirectTo: '/404' }
+  { path: '404', component: NotFoundComponent }
+  // { path: '**', redirectTo: '/404' }
 ]
 
 @NgModule({
@@ -48,7 +50,9 @@ const appRoutes: Routes = [
     HeaderBlackComponent,
     NotFoundComponent,
     EmailsuccessComponent,
-    EmailValidatorDirective  
+    EmailValidatorDirective,
+    FooterComponent,
+    ChildProjectsComponent  
   ],
   imports: [
     BrowserModule,
@@ -59,4 +63,5 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

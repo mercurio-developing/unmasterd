@@ -1,8 +1,21 @@
+.logo{
+    width: 180px;
+    height: 50px;
+}
+
+.row-nav{
+    background-color:white;
+}
+
+.row-nav li{
+    border-bottom:0.1px solid black;
+}
+
 a{
     font-family: Consolas;
-    color:white;
+    color:black;
     font-size: 12px;
-    opacity: 0.8
+    opacity: 0.8;
 }
 a:hover{
     text-decoration: line-through;
