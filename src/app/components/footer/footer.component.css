@@ -52,13 +52,9 @@ row-fix{
     cursor:pointer;
     color:white !important;
     font-size:12px;
-    font-family: Helvetica;
+    font-family: Courier New;
     font-style:bold;
 }
-
-.sample1:hover{
-    text-decoration: line-through;
-} 
 
 .form-control:focus {
   background-color:black;

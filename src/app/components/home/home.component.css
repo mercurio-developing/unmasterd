@@ -1,16 +1,18 @@
-.row-link a {
-    color:white;
-    font-family: Courier New;
-    font-size:12px;
-}
 
 .foo{
     background-color:black;
 }
 
+a {
+    color:white;
+    font-family: Courier New;
+    font-size:12px;
+}
+
 a:hover{
     text-decoration: line-through;
 } 
+
 
 input{
     background-color:black;
@@ -64,10 +66,10 @@ input:focus {
 
 .sample1{
     cursor:pointer;
-    color:white;
+    color:white !important;
     font-size:12px;
-    font-family: Helvetica;
-    font-style:bold;
+    font-family: Courier New;
+    font-style:bold !important;
 }
 
 .logo{
