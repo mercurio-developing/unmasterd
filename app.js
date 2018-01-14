@@ -82,7 +82,7 @@ app.post('/sendmail', function (req, res) {
         from: req.body.email, 
         subject: 'UNMASTERD contact', 
         html: '<h1>UNMASTERD CONTACT</h1></br><div><p><b>MESSAGE:</br></b>'+req.body.message+' </div><div><br>from: '+req.body.email+'</p></div>', // html body
-        to: 'mercuriodevelop@gmail.com'
+        to: 'eddienejgonzales@gmail.com'
     }
 
     smtpTransport.sendMail(mailOptions, function (error, info) {
