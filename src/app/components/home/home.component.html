@@ -64,7 +64,7 @@
         </li>
     </ul>
     <div class="row mt-4 mb-5">
-        <div class="col-8 col-sm-6  col-md-6  col-lg-12 col-xl-12 my-auto mt-5 mx-auto">
+        <div class="col-8 col-sm-6  col-md-6  col-lg-6 col-xl-12 my-auto mt-5 mx-auto">
             <form class="mx-auto" #contact="ngForm" (ngSubmit)="onSubmit(contact.value)">
                 <div class="form-group" [ngClass]="{ 'has-danger': email.invalid && (email.dirty || email.touched), 'has-success': email.valid && (email.dirty ||
             email.touched)}">
