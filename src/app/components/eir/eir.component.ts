@@ -38,7 +38,7 @@ export class EirComponent implements OnInit,OnDestroy {
     this.subscription = $resizeEvent.subscribe(data => {
       this.width = data[0];
       this.height = data[1]
-      if (this.width >= 768 && this.height <= 800) {
+      if (this.width >= 768 && this.height <= 700) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
       } else {
@@ -61,7 +61,7 @@ export class EirComponent implements OnInit,OnDestroy {
       this.renderer.setStyle(this.el.nativeElement.children[0].children[2].children[3].children[0], 'max-width', this.width + 'px')
     }
 
-    if (this.width >= 768 && this.height <= 800) {
+    if (this.width >= 768 && this.height <= 700) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
       this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     } else {
