@@ -3,6 +3,8 @@ p {
     font-size:12px;
 }
 
-.row-fix{
-    height: 425px;
+.container{
+    height: 58%;
+    max-height: 58%;
+    max-width: 100%;
 }
