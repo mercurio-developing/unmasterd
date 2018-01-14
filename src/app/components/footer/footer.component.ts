@@ -25,33 +25,14 @@ export class FooterComponent {
     this.footerService.sendEmail(dataEmail)
   }
 
-  // pdfEIR() {
-  //   event.preventDefault();
-  //   this.footerService.getFile('https://unmasterd.herokuapp.com:443/eir')
-  //     .subscribe(
-  //     fileData => {
-  //       console.log(fileData)
-  //       FileSaver.saveAs(fileData, "eir-sample.pdf")
-  //     },
-  //     error => {
-  //       this.errors = error
-  //     })
-  // }
+  pdfEIR() {
+    window.open("https://unmasterd.herokuapp.com/assets/eir-sample-request-unmasterd.pdf", "_blank");
+  }
 
-  // pdfDB() {
-  //   event.preventDefault();
-  //   console.log('gat')
-  //   this.footerService.getFile('https://unmasterd.herokuapp.com:443/db')
-  //     .subscribe(
-  //     fileData => {
-  //       console.log(fileData)
-  //       FileSaver.saveAs(fileData, "db-sample.pdf")
-  //     },
-  //     error => {
-  //       this.errors = error
-  //     })
-  // }
-  
+  pdfDB() {
+    window.open("https://unmasterd.herokuapp.com/assets/db-sample-request-unmasterd.pdf", "_blank");
+  }
+
   showLinks(){
     this.show = !this.show
   }

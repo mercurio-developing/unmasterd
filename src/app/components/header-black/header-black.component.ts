@@ -10,7 +10,9 @@ export class HeaderBlackComponent implements OnInit {
   valueDate: any;
 
   constructor() {
-    this.valueDate = new Date();
+    setTimeout(function() {
+      this.valueDate = new Date();
+    }, 100);
   }
   
   ngOnInit() {

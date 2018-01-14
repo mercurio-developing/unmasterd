@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
         this.show = true;
       }
-      if (this.height <= 800) {
+      if (this.height <= 500) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
       } else {
@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
     } else {
       this.show = true;
     }
-    if (this.height <= 800) {
+    if (this.height <= 500) {
       this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
       this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
     } else {
@@ -78,30 +78,15 @@ export class HomeComponent implements OnInit {
   }
 
   pdfEIR() {
-    event.preventDefault();
-    this.navService.getFile('https://unmasterd.herokuapp.com:443/eir')
-      .subscribe(
-      fileData => {
-        console.log(fileData)
-        FileSaver.saveAs(fileData, "eir-sample.pdf")
-      },
-      error => {
-        this.errors = error
-      })
+    window.open("https://unmasterd.herokuapp.com/assets/eir-sample-request-unmasterd.pdf", "_blank");
   }
 
   pdfDB() {
-    event.preventDefault();
-    console.log('gat')
-    this.navService.getFile('https://unmasterd.herokuapp.com:443/db')
-      .subscribe(
-      fileData => {
-        console.log(fileData)
-        FileSaver.saveAs(fileData, "db-sample.pdf")
-      },
-      error => {
-        this.errors = error
-      })
+    window.open("https://unmasterd.herokuapp.com/assets/db-sample-request-unmasterd.pdf", "_blank");
+  }
+
+  onSubmit(dataEmail) {
+    this.navService.sendEmail(dataEmail)
   }
 
   showLinks() {
