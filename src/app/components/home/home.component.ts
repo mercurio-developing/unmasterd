@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
         this.renderer.setStyle(this.docu.body, 'overflow', 'hidden');
         this.show = true;
       }
-      if (this.height <= 500) {
+      if (this.height <= 800 && this.width <= 992 || this.height <= 500 ) {
         this.renderer.setStyle(this.docu.body, 'overflow', 'scroll');
         this.renderer.setStyle(this.docu.body, 'overflow-x', 'hidden');
       } else {

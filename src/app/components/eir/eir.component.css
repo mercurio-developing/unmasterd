@@ -155,12 +155,16 @@ h1 {
   }  
   .accordion {
     max-width: 700px;
+    max-height: 700px;
+
   }
 }
 
 @media (min-width: 1200px) { 
   .accordion {
     max-width: 700px;
+    max-height: 700px;
+
   }
 
   .container{

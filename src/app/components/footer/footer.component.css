@@ -48,6 +48,18 @@ row-fix{
     font-style:bold;
 }
 
+.sample1{
+    cursor:pointer;
+    color:white !important;
+    font-size:12px;
+    font-family: Helvetica;
+    font-style:bold;
+}
+
+.sample1:hover{
+    text-decoration: line-through;
+} 
+
 .form-control:focus {
   background-color:black;
   color:white;
