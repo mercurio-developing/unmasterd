@@ -2,15 +2,15 @@
   "name": "new-unmasterd",
   "version": "0.0.0",
   "license": "MIT",
-  "main":"app.js",
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --prod --aot=false --build-optimizer=false",
+    "start": "node app.js"
   },
   "engines": {
     "node": "~8.9.4",
