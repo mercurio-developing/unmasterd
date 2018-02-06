@@ -58,22 +58,22 @@ app.use(express.static(__dirname + '/dist'));
 
 
 
-app.get('/eir', function (req, res) {
-    var myPdf = require('path').normalize(__dirname + '/dist/assets/eir-sample-request-unmasterdpdf');
+// app.get('/eir', function (req, res) {
+//     var myPdf = require('path').normalize(__dirname + '/dist/assets/eir-sample-request-unmasterdpdf');
 
-    fs.readFile(myPdf, function (err, data) {
-        res.contentType("application/pdf");
-        res.send(data);
-    });
-});
+//     fs.readFile(myPdf, function (err, data) {
+//         res.contentType("application/pdf");
+//         res.send(data);
+//     });
+// });
 
-app.get('/db', function (req, res) {
-    var myPdf2 = require('path').normalize(__dirname + '/dist/assets/db-sample-request-unmasterd.pdf');
-    fs.readFile(myPdf2, function (err, data) {
-        res.contentType("application/pdf");
-        res.send(data);
-    });
-});
+// app.get('/db', function (req, res) {
+//     var myPdf2 = require('path').normalize(__dirname + '/dist/assets/db-sample-request-unmasterd.pdf');
+//     fs.readFile(myPdf2, function (err, data) {
+//         res.contentType("application/pdf");
+//         res.send(data);
+//     });
+// });
 
 app.post('/sendmail', function (req, res) {
     console.log(req.body)
