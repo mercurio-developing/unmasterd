@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SignupService } from './signup.service';
+import { EmailvalidatorDirective } from '../../shared/emailvalidator.directive';
 
 @Component({
   selector: 'app-email',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private signup:SignupService) { }
 
   ngOnInit() {
   }
-
+  onSubmit(dataEmail) {
+    this.signup.sendEmail(dataEmail)
+  }
 }
