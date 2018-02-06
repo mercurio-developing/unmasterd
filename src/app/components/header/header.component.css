@@ -1,15 +1,13 @@
-.container-fluid{
-    padding: 0px;
+.logo{
+    width: 200px;
+    height: 150px;
 }
 
-.logo{
-    width: 180px;
-    height: 50px;
-}
 
 .date{
     color:white;
     opacity: 0.9;
-    font-family: Consolas;
+    font-family: Courier New, Courier, Arial;
     font-size:14px;
 }
+

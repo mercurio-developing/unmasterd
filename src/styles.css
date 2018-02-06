@@ -1,10 +1,11 @@
 html{
     height: 100%;
-
 }
+
 body {
-   height: 100%;
-   background-color:black;
-   overflow: hidden;
+    height: 100%;
+    background-image:url('./assets/back.jpg');
+    background-size:100% auto;
+    background-color:black !important;
+    overflow: hidden;   
 }
-

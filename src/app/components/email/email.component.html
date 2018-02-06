@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="row mt-5 w-100">
+    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto mt-5">
+      <form #contact="ngForm" (ngSubmit)="onSubmit(contact.value)">
+        <div class="input-group rounded-0" [ngClass]="{ 'has-danger': email.invalid && (email.dirty || email.touched), 'has-success': email.valid
+        && (email.dirty || email.touched)}">
+          <input type="text" emailvalidator class="form-control rounded-0 text-center email" required (ngModel)="this.email" name="email"
+            placeholder="ENTER EMAIL" #email="ngModel">
+            <button  [disabled]="!contact.form.valid" class="btn rounded-0">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

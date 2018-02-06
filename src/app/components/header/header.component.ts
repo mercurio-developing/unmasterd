@@ -7,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-valueDate:any;
+  valueDate: any;
 
-  constructor() { 
-    this.valueDate = new Date();
-}
+  constructor() {
+    setTimeout(function () {
+      this.valueDate = new Date();
+    }, 60);
+  }
 
   ngOnInit() {
+    this.valueDate = new Date();
   }
+
 
 }

@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('unmasterd App', () => {
+describe('new-unmasterd App', () => {
   let page: AppPage;
 
   beforeEach(() => {
