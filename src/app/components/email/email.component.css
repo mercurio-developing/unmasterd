@@ -1,7 +1,7 @@
 .email{
     width: 250px;
-     font-family: Arial;
-    font-style: bold;
+    font-family: Arial;
+    font-weight: bold;
     opacity: 0.2;
 
 }
@@ -22,7 +22,6 @@ form{
 
 button{
     font-family: Arial;
-    font-style:bold;
     color:black;
     background-color: white;
 }
