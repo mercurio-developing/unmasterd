@@ -10,9 +10,9 @@ export class HeaderComponent implements OnInit {
   valueDate: any;
 
   constructor() {
-    setTimeout(function () {
+    setInterval(() => {         //replaced function() by ()=>
       this.valueDate = new Date();
-    }, 60);
+    }, 1000);
   }
 
   ngOnInit() {
