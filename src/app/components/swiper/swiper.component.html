@@ -1,19 +1,6 @@
-<div class="row mt-5">
-  <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
-    <swiper class="swiper-container" [config]="config" [(index)]="index" >
-        <div *ngFor="let slide of slides;let i = index" class="swiper-slide " [attr.data-index]="i">
-          <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
-              <img #image [src]="slide" (mouseover)="onMouseOver(i+1,image)" (mouseout)="onMouseOut(i+1,image)" class="img-fluid"
-                alt="" [class.active]="selectIndex === i">
-          </div>
-      </div>
-    </swiper>
-    <div class="row">
-      <div class="col-3 mx-auto">
-        <p style="color:white">
-          < {{index + 1}} / {{slides.length}} >
-        </p>
-      </div>
+ <swiper class="swiper-container" [config]="config" [(index)]="index" >
+    <div *ngFor="let slide of slides;let i = index" class="swiper-slide " [attr.data-index]="i">
+       <img #image [src]="slide" (mouseover)="onMouseOver(i+1,image)" (mouseout)="onMouseOut(i+1,image)" class="img-fluid"
+             alt="" [class.active]="selectIndex === i">
     </div>
-  </div>
-</div>
+ </swiper>

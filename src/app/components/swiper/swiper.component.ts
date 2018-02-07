@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DOCUMENT } from '@angular/platform-browser';
+import { ISubscription } from "rxjs/Subscription";
 import { SwiperModule, SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
@@ -6,8 +9,10 @@ import { SwiperModule, SwiperConfigInterface } from 'ngx-swiper-wrapper';
   templateUrl: './swiper.component.html',
   styleUrls: ['./swiper.component.css']
 })
-export class SwiperComponent implements OnInit {
-  index;
+export class SwiperComponent implements OnInit,OnDestroy {
+ 
+  private subscription: ISubscription;
+  width: number = document.documentElement.clientWidth;
 
   public slides = [
     '../assets/img/project-1.png',
@@ -31,8 +36,8 @@ export class SwiperComponent implements OnInit {
 
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
-    slidesPerView: 4,
-    spaceBetween: 25,
+    slidesPerView: 3,
+    spaceBetween: 2,
     observer: true,
     keyboard: true,
     mousewheel: true,
@@ -42,7 +47,38 @@ export class SwiperComponent implements OnInit {
     centeredSlides: true
   };
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private docu) {
+
+    const $resizeEvent = Observable.fromEvent(window, 'resize')
+
+      .map(() => {
+        let width = document.documentElement.clientWidth;
+        return width;
+      })
+
+    this.subscription = $resizeEvent.subscribe(data => {
+      this.width = data
+      if (this.width <= 768) {
+        this.config.slidesPerView = 1;
+      } else {
+        this.config.slidesPerView = 4;
+      }
+
+    });
+  }
+
+  ngOnInit() {
+    console.log(this.width)
+    if (this.width <= 768) {
+      this.config.slidesPerView = 1;
+    } else {
+      this.config.slidesPerView = 4;
+    }
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 
   onMouseOver(index,image): void {
     image.src = "../assets/img/project-hover-"+index+".png";
@@ -52,8 +88,6 @@ export class SwiperComponent implements OnInit {
     image.src = "../assets/img/project-"+index+".png";
   }
 
-  ngOnInit() {
-    this.index = 0;
-  }
+  
 
 }
