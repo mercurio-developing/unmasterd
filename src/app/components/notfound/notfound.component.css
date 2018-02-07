@@ -1,0 +1,10 @@
+p{
+    font-family: Arial;
+    color:white;
+    font-style: bold;
+    width: 200px;
+}
+
+.container{
+    height: 100%;
+}

@@ -44,7 +44,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BrowserModule,
     AppRoutingModule,    
     FormsModule,
-    SwiperModule
+    SwiperModule,
+    HttpModule
   ],
   providers: [
     SignupService,{
