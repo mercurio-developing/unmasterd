@@ -37,7 +37,7 @@ export class SwiperComponent implements OnInit,OnDestroy {
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
     slidesPerView: 3,
-    spaceBetween: 2,
+    spaceBetween: 10,
     observer: true,
     keyboard: true,
     mousewheel: true,

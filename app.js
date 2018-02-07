@@ -56,32 +56,13 @@ app.use(express.static(__dirname + '/dist'));
 
 /*------------------Routing Started ------------------------*/
 
-
-
-// app.get('/eir', function (req, res) {
-//     var myPdf = require('path').normalize(__dirname + '/dist/assets/eir-sample-request-unmasterdpdf');
-
-//     fs.readFile(myPdf, function (err, data) {
-//         res.contentType("application/pdf");
-//         res.send(data);
-//     });
-// });
-
-// app.get('/db', function (req, res) {
-//     var myPdf2 = require('path').normalize(__dirname + '/dist/assets/db-sample-request-unmasterd.pdf');
-//     fs.readFile(myPdf2, function (err, data) {
-//         res.contentType("application/pdf");
-//         res.send(data);
-//     });
-// });
-
 app.post('/sendmail', function (req, res) {
     console.log(req.body)
     
     var mailOptions = {
         from: req.body.email, 
-        subject: 'UNMASTERD contact', 
-        html: '<h1>UNMASTERD CONTACT</h1></br><div><p><b>MESSAGE:</br></b>'+req.body.message+' </div><div><br>from: '+req.body.email+'</p></div>', // html body
+        subject: 'UNMASTERD SIGNUP', 
+        html: '<h1>UNMASTERD SIGNUP</h1></br><div><p><b>EMAIL SUBSCRIBE:</br></b>'+req.body.email+' </div>', // html body
         to: 'eddienejgonzales@gmail.com'
     }
 
